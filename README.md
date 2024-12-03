@@ -15,12 +15,7 @@ install all of the files in the meal plan folder and make sure they stay togethe
 
 # DIRECTIONS
 --------------
-MEAL PLAN
---------------
 * Enter your information
 * Hit submit
 * Watch the magic happen
 * Either print your meal plan or clear the page and try again.
-
-CIPHER
---------
