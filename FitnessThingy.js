@@ -24,6 +24,12 @@ function generateMealPlan() {
         From the user to create a meal plan, OVERRIDING all of the
         stuff currently on the page, thus creating a new webpage.   */ 
 
+    //nabbing the personal data for later :wink:
+    let goal = document.getElementById('goal').value
+    let name = document.getElementById('name').value
+
+
+
     // Defining all relevant variables (meals)
     let breakfast = document.getElementById("bfast").value
     let snack1 = document.getElementById('snack').value
@@ -34,37 +40,77 @@ function generateMealPlan() {
     /*Table Creation -- Creating one column for each meal along with a header for each, then inserting the
     data into the table, finally appending it all to the table*/
     let table = document.createElement('table')
-    table.style.border = "1px solid pink"
+    table.setAttribute('border', '5')
 
-    let row1 = doument.createElement('tr')
-    let header1 = doument.createElement('th')
-    header1.textContent = "Breakfast"
-    let header2 = doument.createElement('th')
-    header2.textContent = "Snack"
-    let header3 = doument.createElement('th')
-    header3.textContent = "Lunch"
-    let header4 = doument.createElement('th')
-    header4.textContent = "Snack"
-    let header5 = doument.createElement('th')
-    header5.textContent = "Dinner"
+    let daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    let tableData = [breakfast, snack1, lunch, snack2, dinner]
 
-    row1.append(header1, header2, header3, header4, header5)
+    //For loop to create Header Row
+    
+    let headerRow = document.createElement('tr')
+    let headers = ['Week Day', 'Breakfast', 'Snack Time', 'Lunch', 'Snack Time', 'Dinner']
+    for (let i=0; i<headers.length; i++) {
+        let header = document.createElement('th')
+        header.textContent = headers[i]
+        headerRow.appendChild(header)
+    }
+    table.appendChild(headerRow)
+    
+    
+    //For loop in order to create table rows and put the data in them
+    for (let i = 0; i<daysOfWeek.length; i++) {
+        let row = document.createElement('tr')
+        row.textContent = daysOfWeek[i]
+        for (let j=0; j<tableData.length; j++) {
+            let data = document.createElement('td')
+            data.textContent = tableData[j]
+            data.style.textAlign = 'center'
+            data.style.verticalAlign = 'middle'
+            row.appendChild(data)
+        }
+        table.appendChild(row)
+    }
+    
 
-    let row2 = doument.createElement('tr')
-    let breakfastData = doument.createElement('th')
-    breakfastData.textContent = breakfast
-    let snack1Data = doument.createElement('th')
-    snack1Data.textContent = snack1
-    let lunchData = doument.createElement('th')
-    lunchData.textContent = lunch
-    let snack2Data = doument.createElement('th')
-    snack2Data.textContent = snack2
-    let dinnerData = doument.createElement('th')
-    dinnerData.textContent = dinner
 
-    row2.append(breakfastData, snack1Data, lunchData, snack2Data, dinnerData)
+    
+    //Creation of a 'new' webpage
+    let yippee = new Audio('meowmeowmeow.mp3')
+    yippee.volume = .5
+    let sickMusic = new Audio('meow2.mp3')
+    sickMusic.play()
+    yippee.play()
 
-    table.append(row1, row2)
+    //Basic format -- deleting everything and adding User name and Goal, with table beneath (and clear/print buttons)
+    document.body.innerHTML = `<h1>Your Meal Plan</h1><h2>Your Goal: ${goal}</h2><h2>By: ${name}</h2>`
+    document.body.appendChild(table)
 
-    document.write(table)
+    //formatting :3:3
+    document.body.style.margin = '0'
+    document.body.style.display = 'flex'
+    document.body.style.flexDirection = 'column'
+    document.body.style.padding = '20px'
+    document.body.style.textAlign = 'center'
+    document.body.style.alignItems = 'center'
+    
+    table.style.fontFamily = "'Comic Sans MS', cursive"
+    table.style.margin = '0 auto'
+
+    //Creating clear/print buttons
+    let clear = document.createElement('button')
+    clear.textContent = "CLEAR PAGE!!!"
+    document.body.appendChild(clear)
+    clear.addEventListener('click', function() {
+        location.reload()
+        sickMusic.pause()
+        sickMusic.currentTime = 0
+    })
+
+    let print = document.createElement('button')
+    print.textContent = "Print Plan"
+    document.body.appendChild(print)
+    print.addEventListener('click', function() {
+        window.print()
+    })
+
 }
