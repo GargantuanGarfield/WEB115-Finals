@@ -6,7 +6,7 @@ This is a meal plan maker: it takes inputs regarding food eaten at each meal, in
 This also takes your personal information and formats it with your goals and name -- allowing for a better page to print, using the print button.
 
 
-![YAYAYAYAYAYAYAYYAY](C:\Users\gmckenzie1\Documents\GitHub\WEB115-Finals\meal plan\images\boykisser-cute.gif)
+![YAYAYAYAYAYAYAYYAY](C:\Users\gmckenzie1\Documents\GitHub\WEB115-Finals\"meal plan"\images\boykisser-cute.gif)
 
 
 # INSTALLATION
