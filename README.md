@@ -6,7 +6,7 @@ This is a meal plan maker: it takes inputs regarding food eaten at each meal, in
 This also takes your personal information and formats it with your goals and name -- allowing for a better page to print, using the print button.
 
 
-![YAYAYAYAYAYAYAYYAY](meal plan/images/boykisser-cute.gif)
+![YAYAYAYAYAYAYAYYAY](mealplan/images/boykisser-cute.gif)
 
 
 # INSTALLATION
@@ -15,7 +15,12 @@ install all of the files in the meal plan folder and make sure they stay togethe
 
 # DIRECTIONS
 --------------
+MEAL PLAN
+--------------
 * Enter your information
 * Hit submit
 * Watch the magic happen
 * Either print your meal plan or clear the page and try again.
+
+CIPHER
+--------
