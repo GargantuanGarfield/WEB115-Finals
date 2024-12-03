@@ -5,9 +5,9 @@
 This is a meal plan maker: it takes inputs regarding food eaten at each meal, including two snacks, and compiles it into a table of meals for the week.
 This also takes your personal information and formats it with your goals and name -- allowing for a better page to print, using the print button.
 
-<p align="center">
-<image src="'meal plan'/images/boykisser-cute.gif">
-</p>
+
+![YAYAYAYAYAYAYAYYAY](meal plan/images/boykisser-cute.gif)
+
 
 # INSTALLATION
 ----------------
